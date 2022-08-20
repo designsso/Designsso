@@ -1,0 +1,311 @@
+body {
+    background: #36f1e6;
+}
+
+* {
+    font-family: Segoe UI, sans-serif;
+}
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 4%;
+    overflow-y: auto !important;
+    height:750px;
+    position: relative;
+    border-radius: 50px;
+}
+
+.header--banner, .header--info {
+    flex: 1;
+}
+.header--banner {
+    display: flex;
+    justify-content: center;
+    text-align: right;
+}
+.header {
+    display: flex;
+    padding: 20px;
+    border-radius: 50px;
+    padding-top: 10px;
+    padding-bottom: 90px !important;
+    align-items: center;
+
+    position: fixed;
+
+    box-sizing: border-box;
+    width: 59.5%;
+    background-color: #2a2a2b;
+    height: 590px !important;
+
+
+    padding-bottom: 40px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+    padding-left: 125px;
+    padding-right: 125px;
+
+}
+
+.header--url, .label {
+    color: #63f1e8;
+}
+
+.header--text {
+    font-size: 45px;
+    font-weight: bold;
+    margin-top:15px;
+    color: white;
+    margin-bottom: 25px;
+}
+
+
+.portfolioBtn {
+    background: #39f8ec;
+    width: max-content;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: bold;
+    border-radius: 50px;
+    color: black;
+}
+
+.btns {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    color: white;
+    margin-top: 30px;
+}
+
+.hireMeBtn {
+    font-weight: 300;
+}
+a {
+    text-decoration: none;
+}
+
+.hireMeBtn:hover {
+    cursor: pointer;
+}
+.tabscontainer {
+    top: 65% !important;
+    transition: all .3s ease-out;
+    border-radius: 50px;
+    background: #434242 !important;
+    padding: 20px;
+    padding-left: 35px;
+
+    height: max-content !important;
+    min-height: 400px;
+    box-sizing: border-box;
+    padding-left: 105px;
+    padding-right: 105px;
+}
+
+
+.tabscontainer {
+    position: relative;
+    transition: all .3s ease-out;
+    background: #428bca;
+}
+
+
+.tabs {
+    display: flex;
+    align-items: center;
+    gap: 70px !important;
+    justify-content: left;
+    box-sizing: border-box;
+
+    color: white;
+    font-weight: lighter;
+    margin-top: 20px;
+    text-align: left;
+
+    width: 100%;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: 33.333% 33.333% 33.333%;
+    margin-top: 50px;
+    width: 100%;
+    justify-content: start;
+
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+.gallery img {
+    display: block;
+    max-width: 100%;
+    width: 100% !important;
+}
+.gallery video {
+}
+
+.tabs .tab {
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 17px;
+    position:relative;
+}
+.tab:hover {
+    cursor: pointer;
+}
+
+.tab.active::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 31px;
+    width: 60%;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    background: #36f1e6;
+    height: 2.5px;
+    border-radius: 50px;
+    position:relative;
+    white-space: nowrap;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+}
+figure {
+    margin-left: 0 !important;
+    width: 100%;
+}
+@media screen and (max-width: 1200px) {
+    html, body {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+    }
+
+    .tabs {
+        gap: 20px !important;
+
+    }
+    .btns {
+        display: block;
+    }
+    .header {
+        padding: 40px !important;
+    }
+
+    .header--text {
+        font-size: 35px !important;
+        width: 100%;
+    }
+    .hireMeBtn {
+        margin-top: 20px;
+    }
+    .container {
+        height: 100% !important;
+        overflow: auto;
+    }
+    .tabscontainer {
+        padding: 30px !important;
+    }
+    .gallery {
+        display: flex;
+justify-content: center !important;
+        flex-direction: column;
+        margin-top: 40px !important;
+    }
+    figure {
+        margin: 0 auto !important;
+        margin-bottom: 20px !important;
+    }
+    .tabscontainer {
+        position: initial !important;
+        height: max-content !important;
+        border-radius: 0 !important;
+        overflow-y: auto;
+    }
+
+    .header {
+        position: initial !important;
+        width: 100%;
+        height: max-content !important;
+        padding-top: 60px;
+        padding-left: 60px;
+        border-radius: 0;
+    }
+    .tabscontainer {
+        padding-left: 60px;
+    }
+    .tabs {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+    .tab {
+        margin-bottom: 7px;
+        font-size: 20px !important;
+
+
+    }
+    .tab.active::before {
+        display: none !important;
+    }
+    .tab.active {
+        color: #36f1e6;
+    }
+    .container {
+        width: 100%;
+        margin: 0 !important;
+        border-radius: 0px;
+    }
+    .header--banner {
+        display: none;
+    }
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 0;
+    border-radius: 16px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 16px;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 16px;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+h1 {
+    margin: 0
+}
+.container {
+
+    overflow: hidden;
+
+}
+.hid-box {
+    top: 100%;
+    position: relative;
+    transition: all .3s ease-out;
+    background: #428bca;
+    height: 100%;
+}
+
