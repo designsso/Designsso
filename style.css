@@ -69,7 +69,7 @@ body {
 .header--banner {
     display: flex;
     justify-content: center;
-    text-align: right;
+    text-align: left;
 }
 .header {
     display: flex;
@@ -80,6 +80,7 @@ body {
     align-items: center;
 
     position: fixed;
+    justify-content: space-between;
 
     box-sizing: border-box;
     width: 59.5%;
@@ -92,7 +93,7 @@ body {
     border-bottom-right-radius: 0px;
 
     padding-left: 125px;
-    padding-right: 125px;
+    padding-right: 25px;
 
 }
 
