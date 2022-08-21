@@ -1,8 +1,11 @@
 var images = [
  
+{"imageURL":"https://source.unsplash.com/VWcPlbHglYc/640x416", "category": "other"},
 
+{"imageURL":"https://source.unsplash.com/VWcPlbHglYc/640x416", "category": "other"},
 
-
+{"imageURL":"https://source.unsplash.com/VWcPlbHglYc/640x416", "category": "other"},
+ 
 ]
 
 const RemoveActiveEl = () => {
