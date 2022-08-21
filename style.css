@@ -241,6 +241,9 @@ figure {
 
     }
  
+    .scrollbar-container {
+        display: none;
+    }
     .header {
         padding: 40px !important;
     }
@@ -353,4 +356,3 @@ overflow-y: auto !important;
     background: #428bca;
     height: 100%;
 }
-
