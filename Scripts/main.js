@@ -1,43 +1,43 @@
 var images = [
  
-{"imageURL":"https://i.imgur.com/2m45I8C.gif", "category": "ab"},
-
-{"imageURL":"https://i.imgur.com/KTPuc1A.gif", "category": "ab"},
-
-{"imageURL":"https://i.imgur.com/BhSmenY.gif", "category": "ab"},
- 
-{"imageURL":"https://i.imgur.com/44Rpt8e.gif", "category": "ab"},
- 
-{"imageURL":"https://i.imgur.com/UBc6K3a.gif", "category": "ab"},
- 
-{"imageURL":"https://i.imgur.com/BtQu4P9.gif", "category": "ab"},
-
-{"imageURL":"https://i.imgur.com/yz7pAZk.gif", "category": "ab"},
- 
-{"imageURL":"https://i.imgur.com/k2kQ8nI.gif", "category": "ab"},
- 
-{"imageURL":"https://i.imgur.com/z9lx5qc.gif", "category": "ab"},
-
-{"imageURL":"https://i.imgur.com/4CW1tBt.gif", "category": "ab"},
-
-{"imageURL":"https://i.imgur.com/z9lx5qc.gif", "category": "ab"},
-
-{"imageURL":"https://i.imgur.com/rVpfcjw.gif", "category": "ab"},
-
-{"imageURL":"https://i.imgur.com/rUWdqQT.gif", "category": "ab"},
-
-{"imageURL":"https://i.imgur.com/1clhwan.gif", "category": "ab"},
-
-{"imageURL":"https://i.imgur.com/aHZQidf.gif", "category": "ab"},
-
-{"imageURL":"https://i.imgur.com/n8UjLZc.gif", "category": "ab"},
- 
- {"imageURL":"https://i.imgur.com/RA300At.gif", "category": "ab"},
- 
-
- 
- 
-]
+    {"imageURL":"https://i.imgur.com/2m45I8C.gif", "category": "ab"},
+    
+    {"imageURL":"https://i.imgur.com/KTPuc1A.gif", "category": "ab"},
+    
+    {"imageURL":"https://i.imgur.com/BhSmenY.gif", "category": "ab"},
+     
+    {"imageURL":"https://i.imgur.com/44Rpt8e.gif", "category": "ab"},
+     
+    {"imageURL":"https://i.imgur.com/UBc6K3a.gif", "category": "ab"},
+     
+    {"imageURL":"https://i.imgur.com/BtQu4P9.gif", "category": "ab"},
+    
+    {"imageURL":"https://i.imgur.com/yz7pAZk.gif", "category": "ab"},
+     
+    {"imageURL":"https://i.imgur.com/k2kQ8nI.gif", "category": "ab"},
+     
+    {"imageURL":"https://i.imgur.com/z9lx5qc.gif", "category": "ab"},
+    
+    {"imageURL":"https://i.imgur.com/4CW1tBt.gif", "category": "ab"},
+    
+    {"imageURL":"https://i.imgur.com/z9lx5qc.gif", "category": "ab"},
+    
+    {"imageURL":"https://i.imgur.com/rVpfcjw.gif", "category": "ab"},
+    
+    {"imageURL":"https://i.imgur.com/rUWdqQT.gif", "category": "ab"},
+    
+    {"imageURL":"https://i.imgur.com/1clhwan.gif", "category": "ab"},
+    
+    {"imageURL":"https://i.imgur.com/aHZQidf.gif", "category": "ab"},
+    
+    {"imageURL":"https://i.imgur.com/n8UjLZc.gif", "category": "ab"},
+     
+     {"imageURL":"https://i.imgur.com/RA300At.gif", "category": "ab"},
+     
+    
+     
+     
+    ]
 
 const RemoveActiveEl = () => {
     try {
@@ -84,7 +84,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function controlScroll (e) {
         var evt = window.event || e;
-        if ((e.target && e.target.classList[0]) && e.target.classList[0].includes("tabs")) {
+
+        if (!e.target || (e.target && e.target.classList[0] && e.target && e.target.classList[0] && e.target.classList[0].includes("tabs" ) || e.target.classList[0].includes("tabs") || e.target.classList[0].includes("tab") || e.target.classList[0].includes("gallery__img"))) {
             console.log( e.target.classList[0])
         }
        else {
@@ -98,9 +99,9 @@ document.addEventListener("DOMContentLoaded", () => {
             curScroll -= 25;
         }
         //console.log(curScroll)
-       $('.container').animate({
-                scrollTop: curScroll
-            }, 40);
+        $('.container').animate({
+                    scrollTop: curScroll
+                }, 0);
        }
     }; 
     
@@ -115,16 +116,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     $(".scrollBtn").click(() => {
 
+
         $('.container').animate({
-            scrollTop: 100,
+            scrollTop: 0,
         }, "slow");
         
     })
     $(".scrollBtn2").click(() => {
 
         $('.container').animate({
-            scrollTop: -70
+            scrollTop: document.querySelector('.container').scrollTopMax,
+
         }, "slow");
+        
+
         
     })
 
