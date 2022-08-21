@@ -105,12 +105,21 @@ document.addEventListener("DOMContentLoaded", () => {
        }
     }; 
     
+    const target = document.querySelector(".container");
+
+    document.addEventListener("wheel", function(e){
+    // prevent the default scrolling event
+    e.preventDefault();
+
+    // scroll the div
+    target.scrollBy(e.deltaX, e.deltaY);
+    })
     if (document.attachEvent) {//if IE (and Opera depending on user setting)
-        document.attachEvent("onmousewheel", controlScroll)
+        // document.attachEvent("onmousewheel", controlScroll)
             
     }
     else if (document.addEventListener) { //WC3 browsers
-        document.addEventListener("mousewheel", controlScroll, false)
+        // document.addEventListener("mousewheel", controlScroll, false)
     }
 
 
