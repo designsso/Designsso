@@ -10,6 +10,10 @@ var images = [
  
 {"imageURL":"https://i.imgur.com/UBc6K3a.gif", "category": "ab"},
  
+{"imageURL":"https://i.imgur.com/BtQu4P9.gif", "category": "ab"},
+
+{"imageURL":"https://i.imgur.com/yz7pAZk.gif", "category": "ab"},
+ 
  
 ]
 
