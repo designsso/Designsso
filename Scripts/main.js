@@ -6,6 +6,11 @@ var images = [
 
 {"imageURL":"https://i.imgur.com/BhSmenY.gif", "category": "ab"},
  
+{"imageURL":"https://i.imgur.com/44Rpt8e.gif", "category": "ab"},
+ 
+{"imageURL":"https://i.imgur.com/UBc6K3a.gif", "category": "ab"},
+ 
+ 
 ]
 
 const RemoveActiveEl = () => {
