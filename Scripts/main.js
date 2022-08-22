@@ -75,52 +75,67 @@ function PercBetweenTwoNumbers(curValue, maxValue) {
     return curValue/maxValue * 100
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+var available = [
+    "logo",
+    "ab",
+    "sb",
+    "web",
+    "app",
+    "threads",
+    "other"
+]
 
 
-    var curScroll = 0;
-
-
-
-    function controlScroll (e) {
-        var evt = window.event || e;
-
-        if (!e.target || (e.target && e.target.classList[0] && e.target && e.target.classList[0] && e.target.classList[0].includes("tabs" ) || e.target.classList[0].includes("tabs") || e.target.classList[0].includes("tab") || e.target.classList[0].includes("gallery__img"))) {
-            console.log( e.target.classList[0])
-        }
-       else {
-        var delta = evt.detail? evt.detail*(-120) : evt.wheelDelta;
-        if(delta < 0) {
-            //scroll down
-            curScroll += 25;
+const Refresh = (name) => {
+    document.querySelector('.gallery').innerHTML = ""
+    for (var image of images.filter(x => x.category === name)) {
+        if (image.imageURL.endsWith(".mp4")) {
+            document.querySelector('.gallery').insertAdjacentHTML('beforeend', `  <figure class="gallery__item gallery__item--1">
+                    <video autoplay width="auto" height="auto">
+              <source src="${image.imageURL}" type="video/mp4">
+                    </video>
+        </figure>`)
         }
         else {
-            //scroll up
-            curScroll -= 25;
+            document.querySelector('.gallery').insertAdjacentHTML('beforeend', `  <figure class="gallery__item gallery__item--1">
+        <img src="${image.imageURL}" class="gallery__img" alt="Image 1">
+
+        </figure>`)
         }
-        //console.log(curScroll)
-        $('.container').animate({
-                    scrollTop: curScroll
-                }, 0);
-       }
-    }; 
-    
+    }
+}
+document.addEventListener("DOMContentLoaded", () => {
+    console.log(document.location.href.split("/"))
+    const HandleTab = () => {
+        var id = document.location.href.split("/").find(x => x.includes("#"))
+        if (id) {
+            id = id.trim().replace("#", "")
+            console.log(id)
+            if (available.includes(id)) {
+                RemoveActiveEl()
+                AddActiveClass(id)
+                Refresh(id);
+                document.querySelector('[name="activeTab"]').setAttribute("value", id)
+
+            }
+        }
+    }
+
+    HandleTab()
+
+    document.querySelector("html").addEventListener("wheel", e=>e.preventDefault());
+    document.querySelector(".container").addEventListener("wheel", e=>myFunction(e));
+
     const target = document.querySelector(".container");
 
     document.addEventListener("wheel", function(e){
-    // prevent the default scrolling event
-    e.preventDefault();
-
-    // scroll the div
-    target.scrollBy(e.deltaX, e.deltaY);
+      // prevent the default scrolling event
+      e.preventDefault();
+    
+      // scroll the div
+      target.scrollBy(e.deltaX, e.deltaY);
     })
-    if (document.attachEvent) {//if IE (and Opera depending on user setting)
-        // document.attachEvent("onmousewheel", controlScroll)
-            
-    }
-    else if (document.addEventListener) { //WC3 browsers
-        // document.addEventListener("mousewheel", controlScroll, false)
-    }
+
 
 
     $(".scrollBtn").click(() => {
