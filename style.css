@@ -76,10 +76,7 @@ html:focus-within {
 }
 .header {
     display: flex;
-    padding: 20px;
     border-radius: 50px;
-    padding-top: 10px;
-    padding-bottom: 90px !important;
     align-items: center;
 
     position: fixed;
@@ -259,7 +256,7 @@ figure {
         width: 95% !important;
     }
     .container .header {
-        width: 93.7%  !important;
+        width: 92.7%  !important;
     }
     .scrollbar-container {
         display: none;
@@ -284,14 +281,14 @@ figure {
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1009px) and (max-width: 1700px) {
     body {
     }
     .container {
-        width: 95% !important;
+        width: 78% !important;
     }
     .container .header {
-        width: 93.7%  !important;
+        width: 77.1%  !important;
     }
     .scrollbar-container {
         display: none;
@@ -302,6 +299,9 @@ figure {
         padding-bottom: 120px !important;
 
         padding-left: 40px !important;
+    }
+    .header--info {
+        padding-left: 80px !important;
     }
     p.header--text {
         font-size: 1.6em !important;
@@ -320,7 +320,7 @@ figure {
 
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width:1702px) {
+@media only screen and (min-width:1700px) {
     body {
     }
     .container {
@@ -339,6 +339,9 @@ figure {
         padding-bottom: 120px !important;
 
         padding-left: 80px !important;
+    }
+    .header--info {
+        padding-left: 70px !important;
     }
     p.header--text {
         font-size: 2.6em !important;
