@@ -287,6 +287,9 @@ figure {
     .container {
         width: 78% !important;
     }
+    .header--banner img {
+        width: 350px !important;
+    }
     .container .header {
         width: 77.1%  !important;
     }
