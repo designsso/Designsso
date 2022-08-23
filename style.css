@@ -15,7 +15,7 @@ html:focus-within {
     display: flex;
 }
 .email {
-    position: absolute;
+    position: fixed;
     right: 0;
     bottom: 0;
     padding: 20px;
@@ -320,7 +320,7 @@ figure {
 
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width:1302px) {
+@media only screen and (min-width:1702px) {
     body {
     }
     .container {
